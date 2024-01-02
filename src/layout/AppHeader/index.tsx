@@ -1,5 +1,7 @@
 import { Menu, type MenuProps } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
 import { HomeOutlined, SearchOutlined, UserOutlined, BookOutlined, MacCommandOutlined } from "@ant-design/icons";
+import Logo from "@/assets/logo.jpg";
 import "./menu.css";
 
 const menuItems: MenuProps["items"] = [
@@ -31,11 +33,25 @@ const menuItems: MenuProps["items"] = [
 ];
 
 const AppHeader = () => {
+  const nav = useNavigate();
+  const { pathname } = useLocation();
+
   return (
     <div className="flex items-center justify-between">
-      <div className="text-2xl font-bold">诗词自动生成系统</div>
+      <div className="flex items-center gap-2">
+        <img src={Logo} className="w-10 h-10" />
+        <div className="text-2xl font-bold">诗词自动生成系统</div>
+      </div>
+
       <div className="w-108">
-        <Menu defaultSelectedKeys={["home"]} mode="horizontal" items={menuItems}></Menu>
+        <Menu
+          defaultSelectedKeys={[pathname.slice(1)]}
+          mode="horizontal"
+          items={menuItems}
+          onSelect={({ key }) => {
+            nav(key);
+          }}
+        ></Menu>
       </div>
     </div>
   );

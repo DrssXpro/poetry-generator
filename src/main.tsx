@@ -5,21 +5,24 @@ import { ConfigProvider } from "antd";
 import zhCN from "antd/locale/zh_CN";
 import "./styles/reset.css";
 import "virtual:windi.css";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ConfigProvider
-      locale={zhCN}
-      theme={{
-        components: {
-          Menu: {
-            activeBarBorderWidth: 0,
-            iconMarginInlineEnd: 5,
+    <BrowserRouter>
+      <ConfigProvider
+        locale={zhCN}
+        theme={{
+          components: {
+            Menu: {
+              activeBarBorderWidth: 0,
+              iconMarginInlineEnd: 5,
+            },
           },
-        },
-      }}
-    >
-      <App />
-    </ConfigProvider>
+        }}
+      >
+        <App />
+      </ConfigProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

@@ -25,6 +25,9 @@ dependencies:
     version: registry.npmmirror.com/react-router-dom@6.21.1(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
+  '@types/node':
+    specifier: ^20.10.6
+    version: registry.npmmirror.com/@types/node@20.10.6
   '@types/react':
     specifier: ^18.2.43
     version: registry.npmmirror.com/@types/react@18.2.46
@@ -54,7 +57,7 @@ devDependencies:
     version: registry.npmmirror.com/typescript@5.3.3
   vite:
     specifier: ^5.0.8
-    version: registry.npmmirror.com/vite@5.0.10
+    version: registry.npmmirror.com/vite@5.0.10(@types/node@20.10.6)
   vite-plugin-windicss:
     specifier: ^1.9.3
     version: registry.npmmirror.com/vite-plugin-windicss@1.9.3(vite@5.0.10)
@@ -1142,6 +1145,14 @@ packages:
     version: 7.0.15
     dev: true
 
+  registry.npmmirror.com/@types/node@20.10.6:
+    resolution: {integrity: sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-20.10.6.tgz}
+    name: '@types/node'
+    version: 20.10.6
+    dependencies:
+      undici-types: registry.npmmirror.com/undici-types@5.26.5
+    dev: true
+
   registry.npmmirror.com/@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.11.tgz}
     name: '@types/prop-types'
@@ -1351,7 +1362,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': registry.npmmirror.com/@babel/plugin-transform-react-jsx-source@7.23.3(@babel/core@7.23.7)
       '@types/babel__core': registry.npmmirror.com/@types/babel__core@7.20.5
       react-refresh: registry.npmmirror.com/react-refresh@0.14.0
-      vite: registry.npmmirror.com/vite@5.0.10
+      vite: registry.npmmirror.com/vite@5.0.10(@types/node@20.10.6)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3514,6 +3525,12 @@ packages:
     hasBin: true
     dev: true
 
+  registry.npmmirror.com/undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/undici-types/-/undici-types-5.26.5.tgz}
+    name: undici-types
+    version: 5.26.5
+    dev: true
+
   registry.npmmirror.com/update-browserslist-db@1.0.13(browserslist@4.22.2):
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/update-browserslist-db/-/update-browserslist-db-1.0.13.tgz}
     id: registry.npmmirror.com/update-browserslist-db/1.0.13
@@ -3547,14 +3564,15 @@ packages:
       '@windicss/plugin-utils': registry.npmmirror.com/@windicss/plugin-utils@1.9.3
       debug: registry.npmmirror.com/debug@4.3.4
       kolorist: registry.npmmirror.com/kolorist@1.8.0
-      vite: registry.npmmirror.com/vite@5.0.10
+      vite: registry.npmmirror.com/vite@5.0.10(@types/node@20.10.6)
       windicss: registry.npmmirror.com/windicss@3.5.6
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  registry.npmmirror.com/vite@5.0.10:
+  registry.npmmirror.com/vite@5.0.10(@types/node@20.10.6):
     resolution: {integrity: sha512-2P8J7WWgmc355HUMlFrwofacvr98DAjoE52BfdbwQtyLH06XKwaL/FMnmKM2crF0iX4MpmMKoDlNCB1ok7zHCw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-5.0.10.tgz}
+    id: registry.npmmirror.com/vite/5.0.10
     name: vite
     version: 5.0.10
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3583,6 +3601,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': registry.npmmirror.com/@types/node@20.10.6
       esbuild: registry.npmmirror.com/esbuild@0.19.11
       postcss: registry.npmmirror.com/postcss@8.4.32
       rollup: registry.npmmirror.com/rollup@4.9.2
