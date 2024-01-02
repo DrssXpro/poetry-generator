@@ -1,5 +1,7 @@
+import AppLayout from "./layout";
+
 const App = () => {
-  return <div>你好</div>;
+  return <AppLayout></AppLayout>;
 };
 
 export default App;
