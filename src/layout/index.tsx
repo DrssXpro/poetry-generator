@@ -1,6 +1,5 @@
 import AppHeader from "./AppHeader";
 import AppMain from "./AppMain";
-import AppFooter from "./AppFooter";
 
 const AppLayout = () => {
   return (
@@ -10,9 +9,6 @@ const AppLayout = () => {
       </div>
       <div className="w-full flex-1">
         <AppMain />
-      </div>
-      <div className="w-full h-10">
-        <AppFooter />
       </div>
     </div>
   );
