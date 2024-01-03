@@ -11,11 +11,17 @@ const PCard = (props: PCardProps) => {
   const likePoem = () => {
     message.success("点赞成功");
   };
-  
+
+  const clickOutSideWeb = (name: string) => {
+    window.open(`https://www.baidu.com/s?wd=${name}`);
+  };
+
   return (
     <div className="flex flex-col items-center">
       <p className="font-bold text-xl my-2">帝京篇十首 九</p>
-      <p className="my-2 text-[#1677FF] cursor-pointer text-lg">太宗皇帝</p>
+      <p className="my-2 text-[#1677FF] cursor-pointer text-lg" onClick={() => clickOutSideWeb("太宗皇帝")}>
+        太宗皇帝
+      </p>
       <div className="flex flex-row flex-wrap max-w-[600px] px-10 justify-center items-center mb-5">
         <div className="my-1 tracking-[0.3em]">建章歡賞夕，二八盡妖妍。</div>
         <div className="my-1 tracking-[0.3em]">羅綺昭陽殿，芬芳玳瑁筵。</div>

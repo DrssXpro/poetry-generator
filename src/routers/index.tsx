@@ -1,4 +1,4 @@
-import { Home, Poems, Poet, Rhythm, Search } from "./pages";
+import { Home, Poems, Poet, Rhythm, Search, SearchResult } from "./pages";
 import { Navigate, RouteObject } from "react-router-dom";
 
 const routes: Array<RouteObject> = [
@@ -22,6 +22,10 @@ const routes: Array<RouteObject> = [
   {
     path: "/poems",
     element: <Poems />,
+  },
+  {
+    path: "/poems_list/:queryMethod/:queryId",
+    element: <SearchResult />,
   },
 ];
 
